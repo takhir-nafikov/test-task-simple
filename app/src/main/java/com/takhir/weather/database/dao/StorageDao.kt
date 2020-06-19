@@ -1,7 +1,6 @@
 package com.takhir.weather.database.dao
 
 import androidx.room.*
-import com.takhir.weather.database.entity.CityData
 import com.takhir.weather.database.entity.CityEntity
 import com.takhir.weather.database.entity.CityTemperatureEntity
 
@@ -23,9 +22,8 @@ interface StorageDao {
 
 
   // Temperature
-  @Query(value = "SELECT cities.name, cities.type, temperature.value " +
-      "FROM cities, temperature WHERE cities.id == temperature.cityId")
-  fun getCityTemperature() : CityData
+  @Query(value = "SELECT * FROM temperature WHERE cityId = :id")
+  fun getCityTemperature(id: Int) : CityTemperatureEntity
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
   fun insertCityTemperature(value: CityTemperatureEntity)

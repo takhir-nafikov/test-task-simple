@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.takhir.weather.database.dao.StorageDao
 import com.takhir.weather.database.entity.CityEntity
 import com.takhir.weather.database.entity.CityTemperatureEntity
 
@@ -37,5 +38,5 @@ abstract class SQLiteDatabase : RoomDatabase() {
     }
   }
 
-//  abstract val storageDao: StorageDao
+  abstract val storageDao: StorageDao
 }

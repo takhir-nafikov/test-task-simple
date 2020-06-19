@@ -2,6 +2,8 @@ package com.takhir.weather.database.entity
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.TypeConverters
+import com.takhir.weather.utils.MonthsConverter
 
 @Entity(
   tableName = "temperature",
@@ -15,6 +17,7 @@ import androidx.room.ForeignKey
 )
 data class CityTemperatureEntity(
   val id: Int,
-  val value: Float,
+  @TypeConverters(MonthsConverter::class)
+  val months: List<Float>,
   val cityId: Int
 )
