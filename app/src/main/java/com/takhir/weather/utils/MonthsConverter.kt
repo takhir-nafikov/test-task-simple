@@ -8,13 +8,12 @@ class MonthsConverter {
   }
 
   @TypeConverter
-  fun fromMonths(months: List<Float>) : String {
+  fun fromMonths(months: List<String>) : String {
     return months.joinToString(separator = SEPARATOR)
   }
 
   @TypeConverter
-  fun toMonths(data: String) : List<Float> {
-    val list = data.split(SEPARATOR)
-    return list.map { it.toFloat() }
+  fun toMonths(data: String) : List<String> {
+    return data.split(SEPARATOR)
   }
 }

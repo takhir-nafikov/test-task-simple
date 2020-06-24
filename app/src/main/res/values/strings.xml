@@ -1,3 +1,41 @@
 <resources>
-    <string name="app_name">weather</string>
+  <string name="app_name">weather</string>
+
+  <string name="spinner_text_type">Type</string>
+  <string name="spinner_text_season">Season</string>
+  <string name="spinner_text_temperature">Temperature</string>
+
+  <string name="btn_text_create">create</string>
+  <string name="btn_text_edit">edit</string>
+  <string name="btn_text_delete">delete</string>
+
+  <string name="text_city_name">City name</string>
+  <string name="text_city_type">City type</string>
+  <string name="btn_text_update">update</string>
+
+  <string-array name="city_type">
+    <item>All</item>
+    <item>Big</item>
+    <item>Middle</item>
+    <item>Small</item>
+  </string-array>
+
+  <string-array name="min_city_type">
+    <item>Big</item>
+    <item>Middle</item>
+    <item>Small</item>
+  </string-array>
+
+  <string-array name="season_type">
+    <item>Winter</item>
+    <item>Spring</item>
+    <item>Summer</item>
+    <item>Autumn</item>
+  </string-array>
+
+  <string-array name="temperature_type">
+    <item>C</item>
+    <item>F</item>
+    <item>K</item>
+  </string-array>
 </resources>
